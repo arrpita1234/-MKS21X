@@ -1,5 +1,8 @@
 add: adds new file to local repository and stages for commit
 commit: commits this version to local repository
-branch <name>: makes a new brance with this name
+   -m "<Message>" makes commit with this message
+ branch <name>: makes a new branch with this name
+  -d deletes that branch
 checkout <name>: goes to branch of that name
 push: pushes changes to remote repository
+ --delete <name> deletes that branch

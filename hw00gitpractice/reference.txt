@@ -6,3 +6,5 @@ commit: commits this version to local repository
 checkout <name>: goes to branch of that name
 push: pushes changes to remote repository
  --delete <name> deletes that branch
+mmm
+nnn

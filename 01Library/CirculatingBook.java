@@ -46,8 +46,8 @@ public class CirculatingBook extends LibraryBook{
     
     public String toString(){
         if(currentHolder != null && dueDate != null){
-            return (super.toString() + "; current holder: " + currentHolder + "; due date: " + dueDate);
+            return (super.toString() + ", " + currentHolder + ", " + dueDate);
         }
-        else return (super.toString() + " no current holder or due date");
+        else return (super.toString());
     }
 }

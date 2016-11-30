@@ -40,6 +40,6 @@ public class Book{
     }
     
     public String toString(){
-        return ("Title: " + getTitle() + "; Author: " + getAuthor() + "; ISBN: " + getISBN());
+        return (getTitle() + ", " + getAuthor() + ", " + getISBN());
     }
 }

@@ -1,0 +1,31 @@
+import java.util.*
+
+public  class SuperArrayIterator implements Iterator<String> {
+    private int start, end;
+    
+    public SuperArrayIterator(int start, int end, SuperArray){
+        this.start = start;
+        this.end = end;
+        
+    }
+    
+    
+    public boolean hasNext(){
+        return start < end;
+    }
+    
+    public String next(){
+        if(hasNext()){
+            start ++;
+            return (.get(start)_
+        }
+    }
+ }
+
+
+
+
+
+
+
+}

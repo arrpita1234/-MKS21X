@@ -1,4 +1,4 @@
-      import java.util.*
+import java.util.*;
     
 public class SuperArray implements Iterable<String>{
       private String[] data;
@@ -24,7 +24,7 @@ public class SuperArray implements Iterable<String>{
       }
         
       public Iterator<String> iterator(){
-            return new SuperArrayIterator(this);   
+	  return new SuperArrayIterator(0, this);   
       }
     
 

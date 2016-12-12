@@ -189,23 +189,11 @@ public static String toCode(String zip){
 
 // postcondition: compares the zip + checkdigit, in numerical order.
   public int compareTo(Barcode other){
-    int i = Integer.parseInt(getZip());
-    int y = Integer.parseInt(other.getZip());
+    int i = Integer.parseInt(getZip()) * 10 + getCheck();
+    int y = Integer.parseInt(other.getZip()) * 10 + other.getCheck();
     
     if (i == y) return 0;
     if (i > y) return 1;
     else return -1;
-}
-
-    public static void main(String[] args){
-       System.out.println(Barcode.toCode("08451")); 
-       System.out.println(Barcode.toZip("|||:::|::|::|::|:|:|::::|||::|:|"));
-       Barcode barcode = new Barcode("11372");
-       System.out.println(barcode);
-       //System.out.println(Barcode.toZip("|||:::|::|::|::|:|:|::::|||::|:"));
-       //System.out.println(Barcode.toZip("|||:::|::|::|::|:|:|::::|||::|a|")); 
-       //System.out.println(Barcode.toZip(":||:::|::|::|::|:|:|::::|||::|::")); 
-      // System.out.println(Barcode.toZip("|||:::|::|::|::|:|:|::::||:::|||"));
     }
-
 }

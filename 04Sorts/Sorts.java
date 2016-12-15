@@ -25,9 +25,18 @@ public class Sorts{
         }
    }
 
+    
+    public static void insertionSort(int[] data){
+                    int n;
+        for (int i = 1; i < data.length; i++){
+            int x = data[i];
+            for (n = i - 1; n >= 0 && x < data[n]; n--){
+                 data[n + 1] = data[n];            }
+            data[n + 1] = x;
+        }
+    }
 
-
-public static void main(String[] args){
+    public static void main(String[] args){
     int[] data = {64, 25, 12, 22, 11};
     
     String blah = "{";
@@ -36,8 +45,8 @@ public static void main(String[] args){
     }
     System.out.println(blah + "}");
    
-    selectionSort(data);
-    
+    //selectionSort(data);
+      insertionSort(data);
      String bleh = "{";
     for(int i = 0; i < data.length; i++){
         bleh += data[i] + " ";

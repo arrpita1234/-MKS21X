@@ -31,27 +31,64 @@ public class Sorts{
         for (int i = 1; i < data.length; i++){
             int x = data[i];
             for (n = i - 1; n >= 0 && x < data[n]; n--){
-                 data[n + 1] = data[n];            }
+                 data[n + 1] = data[n];            
+                 }
             data[n + 1] = x;
         }
+    }
+    
+    
+    public static void bubbleSort(int[] data){
+    
+        for (int i = 0; i + 1 < data.length; i++){
+            for (int n = 0; n + 1 < data.length; n++){
+                if(data[n] > data[n + 1]){
+                    int foo = data[n];
+                    data[n] = data[n+1];
+                    data[n+1] = foo;
+                }
+            }
+        }
+    
+    }
+    
+    private static String toString(int[] data){
+        String blah = "{";
+     for(int i = 0; i < data.length; i++){
+        blah += data[i] + " ";
+        }
+            return (blah + "}");
+    
+    
     }
 
     public static void main(String[] args){
     int[] data = {64, 25, 12, 22, 11};
     
-    String blah = "{";
-    for(int i = 0; i < data.length; i++){
-        blah += data[i] + " ";
-    }
-    System.out.println(blah + "}");
+    System.out.println(toString(data));
    
+    bubbleSort(data);
+    
+    System.out.println(toString(data));
+    
+    int[] solutionArray = {1, 2, 3, 4, 5, 6, 6, 5, 4, 3, 2, 1};
+    
+    System.out.println(toString(solutionArray));
+    
+    bubbleSort(solutionArray);
+    
+    System.out.println(toString(solutionArray));
     //selectionSort(data);
-      insertionSort(data);
-     String bleh = "{";
-    for(int i = 0; i < data.length; i++){
-        bleh += data[i] + " ";
-    }
-    System.out.println(bleh + "}");
+      //insertionSort(data);
+      
+    int[] moreData = {28,	81,	44,	81,	53,10,	82,	83,	41,	43, 93,	36,	31,	75,	80,43,	81,	84};
+    
+     System.out.println(toString(moreData));
+   
+    bubbleSort(moreData);
+    
+    System.out.println(toString(moreData));
+    
 }
 }
 
